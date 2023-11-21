@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Palak_backend": {
+      "main": "src/Palak_backend/main.mo",
+      "type": "motoko"
+    },
+    "Palak_frontend": {
+      "dependencies": [
+        "Palak_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Palak_frontend/src/index.html"
+      },
+      "source": [
+        "src/Palak_frontend/assets",
+        "dist/Palak_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
